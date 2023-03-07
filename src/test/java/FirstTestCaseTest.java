@@ -35,6 +35,10 @@ public class FirstTestCaseTest {
             WebElement IMG_Link = driver.findElement(By.xpath("//*[@id=\"post-217279\"]/a/img"));
             IMG_Link.click();
             Thread.sleep(3000);
+            WebElement Title2 = driver.findElement(By.xpath("//*[@id=\"post-217279\"]/div[2]/p[1]/strong"));
+            String ActualTitle2 = Title2.getText();
+            String ExpectedTitle2 = "7 Free Workshops with Java + JavaScrip to up-skill!";
+            Assert.assertEquals(ActualTitle2, ExpectedTitle2);
         }
 
         @AfterClass
